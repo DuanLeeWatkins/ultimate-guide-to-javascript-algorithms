@@ -9,6 +9,34 @@ return the equivalent of the sentence when capitalised. E.g
 
 function capSentence(text) {
    // Code goes here
+  //Using .forEach() Method
+
+  let wordsArray = text.toLowerCase().split(' ')
+  let capsArray = []
+
+  wordsArray.forEach(word => {
+    capsArray.push(word[0].toUpperCase() + word.slice(1))
+  })
+  return capsArray.join(' ')
+
+  //Using .map() and .slice()
+
+  /* let wordsArray = text.toLowerCase().split(' ')
+  let capsArray = wordsArray.map(word => {
+    return word[0].toUpperCase() + word.slice(1)
+  })
+
+  return capsArray.join(' ') */
+
+  //Using .map() and .replace()
+
+  /* let wordsArray = text.toLowerCase().split(' ')
+
+  let capsArray = wordsArray.map(word => {
+    return word.replace(word[0], word[0].toUpperCase())
+  })
+
+  return capsArray.join(' ') */
 }
 
 
